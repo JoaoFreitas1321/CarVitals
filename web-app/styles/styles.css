@@ -1,0 +1,34 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.title{
+    font-size: xx-large;
+    margin-top: 50px;
+    margin-left: 150px;
+    font-weight:900;
+    color: linear-gradient(#facc15, #f97316);
+    background: linear-gradient(to bottom,#facc15, #f97316);
+    -webkit-background-clip: text;   /* necessário para navegadores baseados em WebKit */
+    -webkit-text-fill-color: transparent; /* torna o texto transparente para ver o bg */
+    background-clip: text;           /* para suporte adicional */
+    color: transparent;  
+}
+
+.login-button{
+    margin-top: 50px;
+    margin-right: 150px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    background: linear-gradient(to bottom,#facc15, #f97316);
+    border-radius: 8px;
+}
