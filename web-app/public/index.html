@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title> VitalCar</title>
         <link rel ="stylesheet" href="../styles/styles.css">
@@ -11,11 +11,39 @@
 
         <header class="header">
             <p class="title"> AutoCare Tracker</p>
-            <button class="login-button" >Login</button>
+            <button class="login-button" onclick="location.href='login.html'">Login</button>
         </header>
+        
+        <div class="texto central fade-in-up">
+            <h1 class="text-center">Keep your car in best shape</h1>
+            <h2 class="teste">Enter your car model and mileage, and we will remind you when it's time for your next oil change and maintenance service.</h2>
+        </div>
 
-        <div class="texto central">
+        <card class="cartao">
+            <cardContent class="flex flex-col md:flex-row items-center gap-4">
+                <Input placeholder="Enter your car model (e.g. Toyota Corolla 2020)" class="flex-1 bg-gray-900 border-gray-700">
+                <Input placeholder="Enter your car model mileage" class = "w-48 bg-gray-900 border-gray-700">
+                 <button class="bg-yellow-500 rounded p-1.5 hover:opacity-80"><Car size={18}/> Check</button>   
+            </cardContent>
+        </card>
+        <div class="container">
+            <div class="card">
+            <div class="icon">🔔</div>
+            <h3>Smart Reminders</h3>
+            <p>Get notifications when it's time for an oil change.</p>
+            </div>
 
+            <div class="card">
+            <div class="icon">🚗</div>
+            <h3>Maintenance Tracking</h3>
+            <p>Log and view your full service history.</p>
+            </div>
+
+            <div class="card">
+            <div class="icon">🚗</div>
+            <h3>Service Recommendations</h3>
+            <p>Know exactly what your car needs and when.</p>
+            </div>
         </div>
     </body>
 </html>

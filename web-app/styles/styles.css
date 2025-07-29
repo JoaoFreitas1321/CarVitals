@@ -9,7 +9,8 @@
 
 
 .title{
-    font-size: xx-large;
+    font-size: 2.25rem;   /* 36px */
+    line-height: 2.5rem;
     margin-top: 50px;
     margin-left: 150px;
     font-weight:900;
@@ -20,6 +21,36 @@
     background-clip: text;           /* para suporte adicional */
     color: transparent;  
 }
+
+.texto.central {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.texto.central h1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.texto.central h2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 
 .login-button{
     margin-top: 50px;
@@ -32,3 +63,93 @@
     background: linear-gradient(to bottom,#facc15, #f97316);
     border-radius: 8px;
 }
+.login-button:hover{
+    opacity: 0.8;
+}
+
+.text-center{
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.teste{
+    text-align: center;
+    color: #d1d5db;
+    font-size: large;
+    max-width: 36rem;
+    margin-left: auto;     
+    margin-right: auto;    
+    margin-top: 28px; 
+}
+
+.cartao{
+    margin-top: 32px;
+    align-self: center;
+    width: 100%;                           /* w-full */
+    max-width: 42rem;                      /* max-w-2xl (42rem = 672px) */
+    padding: 2rem;                         /* p-4 (1rem = 16px) */
+    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 (gray-800 at 50% opacity) */
+    backdrop-filter: blur(24px);           /* backdrop-blur-xl */
+    border: 1px solid #374151;             /* border border-gray-700 */
+    border-radius: 1rem;                   /* rounded-2xl (16px radius) */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+    ;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* gap-6 */
+    margin-top: 4rem; /* mt-16 */
+    max-width: 80rem; /* equivalente a max-w-5xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+/* Responsivo: 3 colunas a partir de 768px */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: rgba(31, 41, 55, 0.4); /* bg-gray-800/40 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 1rem; /* rounded-2xl */
+    border: 1px solid #374151; /* border-gray-700 */
+    transition: border 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards ease;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+    border-color: #facc15; /* hover:border-yellow-500 */
+}
+
+.icon {
+    font-size: 2rem; /* tamanho do ícone */
+    color: #facc15; /* text-yellow-400 */
+}
+
+.card h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-top: 1rem; /* mt-4 */
+    margin-bottom: 0.5rem; /* mb-2 */
+    color: #fff;
+}
+
+.card p {
+    color: #9ca3af; /* text-gray-400 */
+}
+
