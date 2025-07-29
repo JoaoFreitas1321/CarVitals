@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <link rel="stylesheet" href="../styles/mainPage.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../src/mainPage.js" defer></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    </head>
+    <body class ="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-6 flex flex-col">
+        <header class="header">
+            <button class="align-left ">HOME</button>
+            <button class="align-left">ADD CAR</button>
+            <div class="align-right">
+                <button class="sign-out-button">SIGN-OUT</button>
+                <button class="forum-button">FORUM</button>
+            </div>
+        </header>
+        <div class="main-content flex flex-row gap-6 mt-6">
+        <aside class="sidebar">
+            <!-- Conteúdo da sidebar -->
+        </aside>
+
+        <model-viewer class="teste" alt="Ford Focus RS 3D Model"
+                      src="../3D-models/2016_ford_focus_rs.glb"
+                      shadow-intensity="1"
+                      camera-controls
+                      touch-action="pan-y"
+                      class="model-viewer">
+        </model-viewer>
+    </div>
+    </body>
+</html>
